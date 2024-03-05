@@ -2,6 +2,8 @@ var turnNumber = 0;
 var turn6 = 0;
 var goalTurn = 0;
 var restPoint = [1, 9, 14, 22, 27, 35, 40, 48];
+var killTurn = 0;
+var killed = false;
 
 var rollOn = document.querySelector(".dice");
 // to start red pawns
@@ -197,6 +199,11 @@ function diceRoll() {
   } else if (turnNumber === 2) {
     yellowTurn();
   }
+  if (killTurn > 0) {
+    turnNumber = killTurn;
+    killTurn = 0;
+    killed = false;
+  }
 }
 
 rollOn.addEventListener("click", function () {
@@ -211,24 +218,32 @@ function rKill1() {
       yPosition1.removeChild(yellow1);
       yellowUse1 = false;
       yellowStart1.appendChild(yellow1);
+      killed = true;
     } else if (redPosition1 === yellowPosition2) {
       alert("Red Pawn 1 Kill Yellow Pawn 2");
       yellowPosition2 = 27;
       yPosition2.removeChild(yellow2);
       yellowUse2 = false;
       yellowStart2.appendChild(yellow2);
+      killed = true;
     } else if (redPosition1 === yellowPosition3) {
       alert("Red Pawn 1 Kill Yellow Pawn 3");
       yellowPosition3 = 27;
       yPosition3.removeChild(yellow3);
       yellowUse3 = false;
       yellowStart3.appendChild(yellow3);
+      killed = true;
     } else if (redPosition1 === yellowPosition4) {
       alert("Red Pawn 1 Kill Yellow Pawn 4");
       yellowPosition4 = 27;
       yPosition4.removeChild(yellow4);
       yellowUse4 = false;
       yellowStart4.appendChild(yellow4);
+      killed = true;
+    }
+    if (killed === true) {
+      killTurn = 1;
+      turn();
     }
   }
 }
@@ -240,24 +255,32 @@ function rKill2() {
       yPosition1.removeChild(yellow1);
       yellowUse1 = false;
       yellowStart1.appendChild(yellow1);
+      killed = true;
     } else if (redPosition2 === yellowPosition2) {
       alert("Red Pawn 2 Kill Yellow Pawn 2");
       yellowPosition2 = 27;
       yPosition2.removeChild(yellow2);
       yellowUse2 = false;
       yellowStart2.appendChild(yellow2);
+      killed = true;
     } else if (redPosition2 === yellowPosition3) {
       alert("Red Pawn 2 Kill Yellow Pawn 3");
       yellowPosition3 = 27;
       yPosition3.removeChild(yellow3);
       yellowUse3 = false;
       yellowStart3.appendChild(yellow3);
+      killed = true;
     } else if (redPosition2 === yellowPosition4) {
       alert("Red Pawn 2 Kill Yellow Pawn 4");
       yellowPosition4 = 27;
       yPosition4.removeChild(yellow4);
       yellowUse4 = false;
       yellowStart4.appendChild(yellow4);
+      killed = true;
+    }
+    if (killed === true) {
+      killTurn = 1;
+      turn();
     }
   }
 }
@@ -269,24 +292,32 @@ function rKill3() {
       yPosition1.removeChild(yellow1);
       yellowUse1 = false;
       yellowStart1.appendChild(yellow1);
+      killed = true;
     } else if (redPosition3 === yellowPosition2) {
       alert("Red Pawn 3 Kill Yellow Pawn 2");
       yellowPosition2 = 27;
       yPosition2.removeChild(yellow2);
       yellowUse2 = false;
       yellowStart2.appendChild(yellow2);
+      killed = true;
     } else if (redPosition3 === yellowPosition3) {
       alert("Red Pawn 3 Kill Yellow Pawn 3");
       yellowPosition3 = 27;
       yPosition3.removeChild(yellow3);
       yellowUse3 = false;
       yellowStart3.appendChild(yellow3);
+      killed = true;
     } else if (redPosition3 === yellowPosition4) {
       alert("Red Pawn 3 Kill Yellow Pawn 4");
       yellowPosition4 = 27;
       yPosition4.removeChild(yellow4);
       yellowUse4 = false;
       yellowStart4.appendChild(yellow4);
+      killed = true;
+    }
+    if (killed === true) {
+      killTurn = 1;
+      turn();
     }
   }
 }
@@ -298,24 +329,32 @@ function rKill4() {
       yPosition1.removeChild(yellow1);
       yellowUse1 = false;
       yellowStart1.appendChild(yellow1);
+      killed = true;
     } else if (redPosition4 === yellowPosition2) {
       alert("Red Pawn 4 Kill Yellow Pawn 2");
       yellowPosition2 = 27;
       yPosition2.removeChild(yellow2);
       yellowUse2 = false;
       yellowStart2.appendChild(yellow2);
+      killed = true;
     } else if (redPosition4 === yellowPosition3) {
       alert("Red Pawn 4 Kill Yellow Pawn 3");
       yellowPosition3 = 27;
       yPosition3.removeChild(yellow3);
       yellowUse3 = false;
       yellowStart3.appendChild(yellow3);
+      killed = true;
     } else if (redPosition4 === yellowPosition4) {
       alert("Red Pawn 4 Kill Yellow Pawn 4");
       yellowPosition4 = 27;
       yPosition4.removeChild(yellow4);
       yellowUse4 = false;
       yellowStart4.appendChild(yellow4);
+      killed = true;
+    }
+    if (killed === true) {
+      killTurn = 1;
+      turn();
     }
   }
 }
@@ -554,24 +593,32 @@ function yKill1() {
       redPosition1 = 1;
       redUse1 = false;
       redStart1.appendChild(red1);
+      killed = true;
     } else if (yellowPosition1 === redPosition2) {
       alert("Yellow pawn 1 killed red pawn 2!");
       position2.removeChild(red2);
       redPosition2 = 1;
       redUse2 = false;
       redStart2.appendChild(red2);
+      killed = true;
     } else if (yellowPosition1 === redPosition3) {
       alert("Yellow pawn 1 killed red pawn 3!");
       position3.removeChild(red3);
       redPosition3 = 1;
       redUse3 = false;
       redStart3.appendChild(red3);
+      killed = true;
     } else if (yellowPosition1 === redPosition4) {
       alert("Yellow pawn 1 killed red pawn 4!");
       position4.removeChild(red4);
       redPosition4 = 1;
       redUse4 = false;
       redStart4.appendChild(red4);
+      killed = true;
+    }
+    if (killed === true) {
+      killTurn = 2;
+      turn();
     }
   }
 }
@@ -583,24 +630,32 @@ function yKill2() {
       redPosition1 = 1;
       redUse1 = false;
       redStart1.appendChild(red1);
+      killed = true;
     } else if (yellowPosition2 === redPosition2) {
       alert("Yellow pawn 2 killed red pawn 2!");
       position2.removeChild(red2);
       redPosition2 = 1;
       redUse2 = false;
       redStart2.appendChild(red2);
+      killed = true;
     } else if (yellowPosition2 === redPosition3) {
       alert("Yellow pawn 2 killed red pawn 3!");
       position3.removeChild(red3);
       redPosition3 = 1;
       redUse3 = false;
       redStart3.appendChild(red3);
+      killed = true;
     } else if (yellowPosition2 === redPosition4) {
       alert("Yellow pawn 2 killed red pawn 4!");
       position4.removeChild(red4);
       redPosition4 = 1;
       redUse4 = false;
       redStart4.appendChild(red4);
+      killed = true;
+    }
+    if (killed === true) {
+      killTurn = 2;
+      turn();
     }
   }
 }
@@ -612,24 +667,32 @@ function yKill3() {
       redPosition1 = 1;
       redUse1 = false;
       redStart1.appendChild(red1);
+      killed = true;
     } else if (yellowPosition3 === redPosition2) {
       alert("Yellow pawn 3 killed red pawn 2!");
       position2.removeChild(red2);
       redPosition2 = 1;
       redUse2 = false;
       redStart2.appendChild(red2);
+      killed = true;
     } else if (yellowPosition3 === redPosition3) {
       alert("Yellow pawn 3 killed red pawn 3!");
       position3.removeChild(red3);
       redPosition3 = 1;
       redUse3 = false;
       redStart3.appendChild(red3);
+      killed = true;
     } else if (yellowPosition3 === redPosition4) {
       alert("Yellow pawn 3 killed red pawn 4!");
       position4.removeChild(red4);
       redPosition4 = 1;
       redUse4 = false;
       redStart4.appendChild(red4);
+      killed = true;
+    }
+    if (killed === true) {
+      killTurn = 2;
+      turn();
     }
   }
 }
@@ -641,24 +704,32 @@ function yKill4() {
       redPosition1 = 1;
       redUse1 = false;
       redStart1.appendChild(red1);
+      killed = true;
     } else if (yellowPosition4 === redPosition2) {
       alert("Yellow pawn 4 killed red pawn 2!");
       position2.removeChild(red2);
       redPosition2 = 1;
       redUse2 = false;
       redStart2.appendChild(red2);
+      killed = true;
     } else if (yellowPosition4 === redPosition3) {
       alert("Yellow pawn 4 killed red pawn 3!");
       position3.removeChild(red3);
       redPosition3 = 1;
       redUse3 = false;
       redStart3.appendChild(red3);
+      killed = true;
     } else if (yellowPosition4 === redPosition4) {
       alert("Yellow pawn 4 killed red pawn 4!");
       position4.removeChild(red4);
       redPosition4 = 1;
       redUse4 = false;
       redStart4.appendChild(red4);
+      killed = true;
+    }
+    if (killed === true) {
+      killTurn = 2;
+      turn();
     }
   }
 }
@@ -715,7 +786,7 @@ function yRun1() {
 }
 
 yellow1.addEventListener("click", function () {
-  if (yellowStartpawn === true) {
+  if (yellowStartpawn === true && yellowUse1 === true) {
     if (secondFace1 === false) {
       rollOn.removeChild(rollOn.lastChild);
       yRun1();
@@ -788,7 +859,7 @@ function yRun2() {
 }
 
 yellow2.addEventListener("click", function () {
-  if (yellowStartpawn === true) {
+  if (yellowStartpawn === true && yellowUse2 === true) {
     if (secondFace2 === false) {
       rollOn.removeChild(rollOn.lastChild);
       yRun2();
@@ -861,7 +932,7 @@ function yRun3() {
 }
 
 yellow3.addEventListener("click", function () {
-  if (yellowStartpawn === true) {
+  if (yellowStartpawn === true && yellowUse3 === true) {
     if (secondFace3 === false) {
       rollOn.removeChild(rollOn.lastChild);
       yRun3();
@@ -934,7 +1005,7 @@ function yRun4() {
 }
 
 yellow4.addEventListener("click", function () {
-  if (yellowStartpawn === true) {
+  if (yellowStartpawn === true && yellowUse4 === true) {
     if (secondFace4 === false) {
       rollOn.removeChild(rollOn.lastChild);
       yRun4();
