@@ -212,34 +212,36 @@ rollOn.addEventListener("click", function () {
 // Function to Kill with Red
 function rKill1() {
   if (restPoint.indexOf(redPosition1) === -1) {
-    if (redPosition1 === yellowPosition1) {
-      alert("Red Pawn 1 Kill Yellow Pawn 1");
-      yellowPosition1 = 27;
-      yPosition1.removeChild(yellow1);
-      yellowUse1 = false;
-      yellowStart1.appendChild(yellow1);
-      killed = true;
-    } else if (redPosition1 === yellowPosition2) {
-      alert("Red Pawn 1 Kill Yellow Pawn 2");
-      yellowPosition2 = 27;
-      yPosition2.removeChild(yellow2);
-      yellowUse2 = false;
-      yellowStart2.appendChild(yellow2);
-      killed = true;
-    } else if (redPosition1 === yellowPosition3) {
-      alert("Red Pawn 1 Kill Yellow Pawn 3");
-      yellowPosition3 = 27;
-      yPosition3.removeChild(yellow3);
-      yellowUse3 = false;
-      yellowStart3.appendChild(yellow3);
-      killed = true;
-    } else if (redPosition1 === yellowPosition4) {
-      alert("Red Pawn 1 Kill Yellow Pawn 4");
-      yellowPosition4 = 27;
-      yPosition4.removeChild(yellow4);
-      yellowUse4 = false;
-      yellowStart4.appendChild(yellow4);
-      killed = true;
+    if (thirdFace1 === false) {
+      if (redPosition1 === yellowPosition1) {
+        alert("Red Pawn 1 Kill Yellow Pawn 1");
+        yellowPosition1 = 27;
+        yPosition1.removeChild(yellow1);
+        yellowUse1 = false;
+        yellowStart1.appendChild(yellow1);
+        killed = true;
+      } else if (redPosition1 === yellowPosition2) {
+        alert("Red Pawn 1 Kill Yellow Pawn 2");
+        yellowPosition2 = 27;
+        yPosition2.removeChild(yellow2);
+        yellowUse2 = false;
+        yellowStart2.appendChild(yellow2);
+        killed = true;
+      } else if (redPosition1 === yellowPosition3) {
+        alert("Red Pawn 1 Kill Yellow Pawn 3");
+        yellowPosition3 = 27;
+        yPosition3.removeChild(yellow3);
+        yellowUse3 = false;
+        yellowStart3.appendChild(yellow3);
+        killed = true;
+      } else if (redPosition1 === yellowPosition4) {
+        alert("Red Pawn 1 Kill Yellow Pawn 4");
+        yellowPosition4 = 27;
+        yPosition4.removeChild(yellow4);
+        yellowUse4 = false;
+        yellowStart4.appendChild(yellow4);
+        killed = true;
+      }
     }
     if (killed === true) {
       killTurn = 1;
@@ -249,34 +251,36 @@ function rKill1() {
 }
 function rKill2() {
   if (restPoint.indexOf(redPosition2) === -1) {
-    if (redPosition2 === yellowPosition1) {
-      alert("Red Pawn 2 Kill Yellow Pawn 1");
-      yellowPosition1 = 27;
-      yPosition1.removeChild(yellow1);
-      yellowUse1 = false;
-      yellowStart1.appendChild(yellow1);
-      killed = true;
-    } else if (redPosition2 === yellowPosition2) {
-      alert("Red Pawn 2 Kill Yellow Pawn 2");
-      yellowPosition2 = 27;
-      yPosition2.removeChild(yellow2);
-      yellowUse2 = false;
-      yellowStart2.appendChild(yellow2);
-      killed = true;
-    } else if (redPosition2 === yellowPosition3) {
-      alert("Red Pawn 2 Kill Yellow Pawn 3");
-      yellowPosition3 = 27;
-      yPosition3.removeChild(yellow3);
-      yellowUse3 = false;
-      yellowStart3.appendChild(yellow3);
-      killed = true;
-    } else if (redPosition2 === yellowPosition4) {
-      alert("Red Pawn 2 Kill Yellow Pawn 4");
-      yellowPosition4 = 27;
-      yPosition4.removeChild(yellow4);
-      yellowUse4 = false;
-      yellowStart4.appendChild(yellow4);
-      killed = true;
+    if (thirdFace2 === false) {
+      if (redPosition2 === yellowPosition1) {
+        alert("Red Pawn 2 Kill Yellow Pawn 1");
+        yellowPosition1 = 27;
+        yPosition1.removeChild(yellow1);
+        yellowUse1 = false;
+        yellowStart1.appendChild(yellow1);
+        killed = true;
+      } else if (redPosition2 === yellowPosition2) {
+        alert("Red Pawn 2 Kill Yellow Pawn 2");
+        yellowPosition2 = 27;
+        yPosition2.removeChild(yellow2);
+        yellowUse2 = false;
+        yellowStart2.appendChild(yellow2);
+        killed = true;
+      } else if (redPosition2 === yellowPosition3) {
+        alert("Red Pawn 2 Kill Yellow Pawn 3");
+        yellowPosition3 = 27;
+        yPosition3.removeChild(yellow3);
+        yellowUse3 = false;
+        yellowStart3.appendChild(yellow3);
+        killed = true;
+      } else if (redPosition2 === yellowPosition4) {
+        alert("Red Pawn 2 Kill Yellow Pawn 4");
+        yellowPosition4 = 27;
+        yPosition4.removeChild(yellow4);
+        yellowUse4 = false;
+        yellowStart4.appendChild(yellow4);
+        killed = true;
+      }
     }
     if (killed === true) {
       killTurn = 1;
@@ -286,34 +290,36 @@ function rKill2() {
 }
 function rKill3() {
   if (restPoint.indexOf(redPosition3) === -1) {
-    if (redPosition3 === yellowPosition1) {
-      alert("Red Pawn 3 Kill Yellow Pawn 1");
-      yellowPosition1 = 27;
-      yPosition1.removeChild(yellow1);
-      yellowUse1 = false;
-      yellowStart1.appendChild(yellow1);
-      killed = true;
-    } else if (redPosition3 === yellowPosition2) {
-      alert("Red Pawn 3 Kill Yellow Pawn 2");
-      yellowPosition2 = 27;
-      yPosition2.removeChild(yellow2);
-      yellowUse2 = false;
-      yellowStart2.appendChild(yellow2);
-      killed = true;
-    } else if (redPosition3 === yellowPosition3) {
-      alert("Red Pawn 3 Kill Yellow Pawn 3");
-      yellowPosition3 = 27;
-      yPosition3.removeChild(yellow3);
-      yellowUse3 = false;
-      yellowStart3.appendChild(yellow3);
-      killed = true;
-    } else if (redPosition3 === yellowPosition4) {
-      alert("Red Pawn 3 Kill Yellow Pawn 4");
-      yellowPosition4 = 27;
-      yPosition4.removeChild(yellow4);
-      yellowUse4 = false;
-      yellowStart4.appendChild(yellow4);
-      killed = true;
+    if (thirdFace3 === false) {
+      if (redPosition3 === yellowPosition1) {
+        alert("Red Pawn 3 Kill Yellow Pawn 1");
+        yellowPosition1 = 27;
+        yPosition1.removeChild(yellow1);
+        yellowUse1 = false;
+        yellowStart1.appendChild(yellow1);
+        killed = true;
+      } else if (redPosition3 === yellowPosition2) {
+        alert("Red Pawn 3 Kill Yellow Pawn 2");
+        yellowPosition2 = 27;
+        yPosition2.removeChild(yellow2);
+        yellowUse2 = false;
+        yellowStart2.appendChild(yellow2);
+        killed = true;
+      } else if (redPosition3 === yellowPosition3) {
+        alert("Red Pawn 3 Kill Yellow Pawn 3");
+        yellowPosition3 = 27;
+        yPosition3.removeChild(yellow3);
+        yellowUse3 = false;
+        yellowStart3.appendChild(yellow3);
+        killed = true;
+      } else if (redPosition3 === yellowPosition4) {
+        alert("Red Pawn 3 Kill Yellow Pawn 4");
+        yellowPosition4 = 27;
+        yPosition4.removeChild(yellow4);
+        yellowUse4 = false;
+        yellowStart4.appendChild(yellow4);
+        killed = true;
+      }
     }
     if (killed === true) {
       killTurn = 1;
@@ -323,34 +329,36 @@ function rKill3() {
 }
 function rKill4() {
   if (restPoint.indexOf(redPosition4) === -1) {
-    if (redPosition4 === yellowPosition1) {
-      alert("Red Pawn 4 Kill Yellow Pawn 1");
-      yellowPosition1 = 27;
-      yPosition1.removeChild(yellow1);
-      yellowUse1 = false;
-      yellowStart1.appendChild(yellow1);
-      killed = true;
-    } else if (redPosition4 === yellowPosition2) {
-      alert("Red Pawn 4 Kill Yellow Pawn 2");
-      yellowPosition2 = 27;
-      yPosition2.removeChild(yellow2);
-      yellowUse2 = false;
-      yellowStart2.appendChild(yellow2);
-      killed = true;
-    } else if (redPosition4 === yellowPosition3) {
-      alert("Red Pawn 4 Kill Yellow Pawn 3");
-      yellowPosition3 = 27;
-      yPosition3.removeChild(yellow3);
-      yellowUse3 = false;
-      yellowStart3.appendChild(yellow3);
-      killed = true;
-    } else if (redPosition4 === yellowPosition4) {
-      alert("Red Pawn 4 Kill Yellow Pawn 4");
-      yellowPosition4 = 27;
-      yPosition4.removeChild(yellow4);
-      yellowUse4 = false;
-      yellowStart4.appendChild(yellow4);
-      killed = true;
+    if (thirdFace4 === false) {
+      if (redPosition4 === yellowPosition1) {
+        alert("Red Pawn 4 Kill Yellow Pawn 1");
+        yellowPosition1 = 27;
+        yPosition1.removeChild(yellow1);
+        yellowUse1 = false;
+        yellowStart1.appendChild(yellow1);
+        killed = true;
+      } else if (redPosition4 === yellowPosition2) {
+        alert("Red Pawn 4 Kill Yellow Pawn 2");
+        yellowPosition2 = 27;
+        yPosition2.removeChild(yellow2);
+        yellowUse2 = false;
+        yellowStart2.appendChild(yellow2);
+        killed = true;
+      } else if (redPosition4 === yellowPosition3) {
+        alert("Red Pawn 4 Kill Yellow Pawn 3");
+        yellowPosition3 = 27;
+        yPosition3.removeChild(yellow3);
+        yellowUse3 = false;
+        yellowStart3.appendChild(yellow3);
+        killed = true;
+      } else if (redPosition4 === yellowPosition4) {
+        alert("Red Pawn 4 Kill Yellow Pawn 4");
+        yellowPosition4 = 27;
+        yPosition4.removeChild(yellow4);
+        yellowUse4 = false;
+        yellowStart4.appendChild(yellow4);
+        killed = true;
+      }
     }
     if (killed === true) {
       killTurn = 1;
@@ -756,6 +764,7 @@ var yellowPosition1 = 27;
 var yellowGoal1 = 0;
 var yPosition1 = 0;
 var secondFace1 = false;
+var thirdFace1 = false;
 function yRun1() {
   yellowPosition1 = yellowPosition1 + random;
   yellowGoal1 = yellowPosition1 - 25;
@@ -775,6 +784,7 @@ function yRun1() {
     if (secondFace1 === true) {
       yPosition1 = document.getElementById("y" + yellowGoal1);
       yPosition1.appendChild(yellow1);
+      thirdFace1 = true;
     }
   } else if (yellowGoal1 === 6) {
     yPosition1 = document.getElementById("y6");
@@ -829,6 +839,7 @@ var yellowPosition2 = 27;
 var yellowGoal2 = 0;
 var yPosition2 = 0;
 var secondFace2 = false;
+var thirdFace2 = false;
 function yRun2() {
   yellowPosition2 = yellowPosition2 + random;
   yellowGoal2 = yellowPosition2 - 25;
@@ -848,6 +859,7 @@ function yRun2() {
     if (secondFace2 === true) {
       yPosition2 = document.getElementById("y" + yellowGoal2);
       yPosition2.appendChild(yellow2);
+      thirdFace2 = true;
     }
   } else if (yellowGoal2 === 6) {
     yPosition2 = document.getElementById("y6");
@@ -902,6 +914,7 @@ var yellowPosition3 = 27;
 var yellowGoal3 = 0;
 var yPosition3 = 0;
 var secondFace3 = false;
+var thirdFace3 = false;
 function yRun3() {
   yellowPosition3 = yellowPosition3 + random;
   yellowGoal3 = yellowPosition3 - 25;
@@ -921,6 +934,7 @@ function yRun3() {
     if (secondFace3 === true) {
       yPosition3 = document.getElementById("y" + yellowGoal3);
       yPosition3.appendChild(yellow3);
+      thirdFace3 = true;
     }
   } else if (yellowGoal3 === 6) {
     yPosition3 = document.getElementById("y6");
@@ -975,6 +989,7 @@ var yellowPosition4 = 27;
 var yellowGoal4 = 0;
 var yPosition4 = 0;
 var secondFace4 = false;
+var thirdFace4 = false;
 function yRun4() {
   yellowPosition4 = yellowPosition4 + random;
   yellowGoal4 = yellowPosition4 - 25;
@@ -994,6 +1009,7 @@ function yRun4() {
     if (secondFace4 === true) {
       yPosition4 = document.getElementById("y" + yellowGoal4);
       yPosition4.appendChild(yellow4);
+      thirdFace4 = true;
     }
   } else if (yellowGoal4 === 6) {
     yPosition4 = document.getElementById("y6");
