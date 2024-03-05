@@ -1,6 +1,7 @@
 var turnNumber = 0;
 var turn6 = 0;
 var goalTurn = 0;
+var restPoint = [1, 9, 14, 22, 27, 35, 40, 48];
 
 var rollOn = document.querySelector(".dice");
 // to start red pawns
@@ -279,7 +280,7 @@ redStart4.addEventListener("click", function () {
 });
 
 red1.addEventListener("click", function () {
-  if (redStartpawn === true) {
+  if (redStartpawn === true && redUse1 === true) {
     if (redGoal1 + random <= 6) {
       rollOn.removeChild(rollOn.lastChild);
       run();
@@ -293,7 +294,7 @@ red1.addEventListener("click", function () {
   }
 });
 red2.addEventListener("click", function () {
-  if (redStartpawn === true) {
+  if (redStartpawn === true && redUse2 === true) {
     if (redGoal2 + random <= 6) {
       rollOn.removeChild(rollOn.lastChild);
       run2();
@@ -307,7 +308,7 @@ red2.addEventListener("click", function () {
   }
 });
 red3.addEventListener("click", function () {
-  if (redStartpawn === true) {
+  if (redStartpawn === true && redUse3 === true) {
     if (redGoal3 + random <= 6) {
       rollOn.removeChild(rollOn.lastChild);
       run3();
@@ -321,7 +322,7 @@ red3.addEventListener("click", function () {
   }
 });
 red4.addEventListener("click", function () {
-  if (redStartpawn === true) {
+  if (redStartpawn === true && redUse4 === true) {
     if (redGoal4 + random <= 6) {
       rollOn.removeChild(rollOn.lastChild);
       run4();
@@ -425,12 +426,119 @@ function run4() {
 }
 // functionn to kill with yellow1
 function yKill1() {
-  if (yellowPosition1 === redPosition1) {
-    alert("Yellow pawn 1 killed red pawn 1!");
-    position1.removeChild(red1);
-    redPosition1 = 1;
-    redUse1 = false;
-    redStart1.appendChild(red1);
+  if (restPoint.indexOf(yellowPosition1) === -1) {
+    if (yellowPosition1 === redPosition1) {
+      alert("Yellow pawn 1 killed red pawn 1!");
+      position1.removeChild(red1);
+      redPosition1 = 1;
+      redUse1 = false;
+      redStart1.appendChild(red1);
+    } else if (yellowPosition1 === redPosition2) {
+      alert("Yellow pawn 1 killed red pawn 2!");
+      position2.removeChild(red2);
+      redPosition2 = 1;
+      redUse2 = false;
+      redStart2.appendChild(red2);
+    } else if (yellowPosition1 === redPosition3) {
+      alert("Yellow pawn 1 killed red pawn 3!");
+      position3.removeChild(red3);
+      redPosition3 = 1;
+      redUse3 = false;
+      redStart3.appendChild(red3);
+    } else if (yellowPosition1 === redPosition4) {
+      alert("Yellow pawn 1 killed red pawn 4!");
+      position4.removeChild(red4);
+      redPosition4 = 1;
+      redUse4 = false;
+      redStart4.appendChild(red4);
+    }
+  }
+}
+function yKill2() {
+  if (restPoint.indexOf(yellowPosition2) === -1) {
+    if (yellowPosition2 === redPosition1) {
+      alert("Yellow pawn 2 killed red pawn 1!");
+      position1.removeChild(red1);
+      redPosition1 = 1;
+      redUse1 = false;
+      redStart1.appendChild(red1);
+    } else if (yellowPosition2 === redPosition2) {
+      alert("Yellow pawn 2 killed red pawn 2!");
+      position2.removeChild(red2);
+      redPosition2 = 1;
+      redUse2 = false;
+      redStart2.appendChild(red2);
+    } else if (yellowPosition2 === redPosition3) {
+      alert("Yellow pawn 2 killed red pawn 3!");
+      position3.removeChild(red3);
+      redPosition3 = 1;
+      redUse3 = false;
+      redStart3.appendChild(red3);
+    } else if (yellowPosition2 === redPosition4) {
+      alert("Yellow pawn 2 killed red pawn 4!");
+      position4.removeChild(red4);
+      redPosition4 = 1;
+      redUse4 = false;
+      redStart4.appendChild(red4);
+    }
+  }
+}
+function yKill3() {
+  if (restPoint.indexOf(yellowPosition3) === -1) {
+    if (yellowPosition3 === redPosition1) {
+      alert("Yellow pawn 3 killed red pawn 1!");
+      position1.removeChild(red1);
+      redPosition1 = 1;
+      redUse1 = false;
+      redStart1.appendChild(red1);
+    } else if (yellowPosition3 === redPosition2) {
+      alert("Yellow pawn 3 killed red pawn 2!");
+      position2.removeChild(red2);
+      redPosition2 = 1;
+      redUse2 = false;
+      redStart2.appendChild(red2);
+    } else if (yellowPosition3 === redPosition3) {
+      alert("Yellow pawn 3 killed red pawn 3!");
+      position3.removeChild(red3);
+      redPosition3 = 1;
+      redUse3 = false;
+      redStart3.appendChild(red3);
+    } else if (yellowPosition3 === redPosition4) {
+      alert("Yellow pawn 3 killed red pawn 4!");
+      position4.removeChild(red4);
+      redPosition4 = 1;
+      redUse4 = false;
+      redStart4.appendChild(red4);
+    }
+  }
+}
+function yKill4() {
+  if (restPoint.indexOf(yellowPosition3) === -1) {
+    if (yellowPosition4 === redPosition1) {
+      alert("Yellow pawn 4 killed red pawn 1!");
+      position1.removeChild(red1);
+      redPosition1 = 1;
+      redUse1 = false;
+      redStart1.appendChild(red1);
+    } else if (yellowPosition4 === redPosition2) {
+      alert("Yellow pawn 4 killed red pawn 2!");
+      position2.removeChild(red2);
+      redPosition2 = 1;
+      redUse2 = false;
+      redStart2.appendChild(red2);
+    } else if (yellowPosition4 === redPosition3) {
+      alert("Yellow pawn 4 killed red pawn 3!");
+      position3.removeChild(red3);
+      redPosition3 = 1;
+      redUse3 = false;
+      redStart3.appendChild(red3);
+    } else if (yellowPosition4 === redPosition4) {
+      alert("Yellow pawn 4 killed red pawn 4!");
+      position4.removeChild(red4);
+      redPosition4 = 1;
+      redUse4 = false;
+      redStart4.appendChild(red4);
+    }
   }
 }
 var yellowUse1 = false;
@@ -496,6 +604,7 @@ yellow1.addEventListener("click", function () {
       rollOn.removeChild(rollOn.lastChild);
       yRun1();
       rolled = true;
+      yKill1();
     } else if (secondFace1 === true && yellowGoal1 + random > 6) {
       alert("can't roll");
       // temporarily
@@ -563,10 +672,12 @@ yellow2.addEventListener("click", function () {
       rollOn.removeChild(rollOn.lastChild);
       yRun2();
       rolled = true;
+      yKill2();
     } else if (yellowGoal2 + random <= 6) {
       rollOn.removeChild(rollOn.lastChild);
       yRun2();
       rolled = true;
+      yKill2();
     } else if (secondFace2 === true && yellowGoal2 + random > 6) {
       alert("can't roll");
       // temporarily
@@ -634,10 +745,12 @@ yellow3.addEventListener("click", function () {
       rollOn.removeChild(rollOn.lastChild);
       yRun3();
       rolled = true;
+      yKill3();
     } else if (yellowGoal3 + random <= 6) {
       rollOn.removeChild(rollOn.lastChild);
       yRun3();
       rolled = true;
+      yKill3();
     } else if (secondFace3 === true && yellowGoal3 + random > 6) {
       alert("can't roll");
       // temporarily
@@ -705,10 +818,12 @@ yellow4.addEventListener("click", function () {
       rollOn.removeChild(rollOn.lastChild);
       yRun4();
       rolled = true;
+      yKill4();
     } else if (yellowGoal4 + random <= 6) {
       rollOn.removeChild(rollOn.lastChild);
       yRun4();
       rolled = true;
+      yKill4();
     } else if (secondFace4 === true && yellowGoal4 + random > 6) {
       alert("can't roll");
       // temporarily
