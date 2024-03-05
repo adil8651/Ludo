@@ -202,6 +202,123 @@ function diceRoll() {
 rollOn.addEventListener("click", function () {
   diceRoll();
 });
+// Function to Kill with Red
+function rKill1() {
+  if (restPoint.indexOf(redPosition1) === -1) {
+    if (redPosition1 === yellowPosition1) {
+      alert("Red Pawn 1 Kill Yellow Pawn 1");
+      yellowPosition1 = 27;
+      yPosition1.removeChild(yellow1);
+      yellowUse1 = false;
+      yellowStart1.appendChild(yellow1);
+    } else if (redPosition1 === yellowPosition2) {
+      alert("Red Pawn 1 Kill Yellow Pawn 2");
+      yellowPosition2 = 27;
+      yPosition2.removeChild(yellow2);
+      yellowUse2 = false;
+      yellowStart2.appendChild(yellow2);
+    } else if (redPosition1 === yellowPosition3) {
+      alert("Red Pawn 1 Kill Yellow Pawn 3");
+      yellowPosition3 = 27;
+      yPosition3.removeChild(yellow3);
+      yellowUse3 = false;
+      yellowStart3.appendChild(yellow3);
+    } else if (redPosition1 === yellowPosition4) {
+      alert("Red Pawn 1 Kill Yellow Pawn 4");
+      yellowPosition4 = 27;
+      yPosition4.removeChild(yellow4);
+      yellowUse4 = false;
+      yellowStart4.appendChild(yellow4);
+    }
+  }
+}
+function rKill2() {
+  if (restPoint.indexOf(redPosition2) === -1) {
+    if (redPosition2 === yellowPosition1) {
+      alert("Red Pawn 2 Kill Yellow Pawn 1");
+      yellowPosition1 = 27;
+      yPosition1.removeChild(yellow1);
+      yellowUse1 = false;
+      yellowStart1.appendChild(yellow1);
+    } else if (redPosition2 === yellowPosition2) {
+      alert("Red Pawn 2 Kill Yellow Pawn 2");
+      yellowPosition2 = 27;
+      yPosition2.removeChild(yellow2);
+      yellowUse2 = false;
+      yellowStart2.appendChild(yellow2);
+    } else if (redPosition2 === yellowPosition3) {
+      alert("Red Pawn 2 Kill Yellow Pawn 3");
+      yellowPosition3 = 27;
+      yPosition3.removeChild(yellow3);
+      yellowUse3 = false;
+      yellowStart3.appendChild(yellow3);
+    } else if (redPosition2 === yellowPosition4) {
+      alert("Red Pawn 2 Kill Yellow Pawn 4");
+      yellowPosition4 = 27;
+      yPosition4.removeChild(yellow4);
+      yellowUse4 = false;
+      yellowStart4.appendChild(yellow4);
+    }
+  }
+}
+function rKill3() {
+  if (restPoint.indexOf(redPosition3) === -1) {
+    if (redPosition3 === yellowPosition1) {
+      alert("Red Pawn 3 Kill Yellow Pawn 1");
+      yellowPosition1 = 27;
+      yPosition1.removeChild(yellow1);
+      yellowUse1 = false;
+      yellowStart1.appendChild(yellow1);
+    } else if (redPosition3 === yellowPosition2) {
+      alert("Red Pawn 3 Kill Yellow Pawn 2");
+      yellowPosition2 = 27;
+      yPosition2.removeChild(yellow2);
+      yellowUse2 = false;
+      yellowStart2.appendChild(yellow2);
+    } else if (redPosition3 === yellowPosition3) {
+      alert("Red Pawn 3 Kill Yellow Pawn 3");
+      yellowPosition3 = 27;
+      yPosition3.removeChild(yellow3);
+      yellowUse3 = false;
+      yellowStart3.appendChild(yellow3);
+    } else if (redPosition3 === yellowPosition4) {
+      alert("Red Pawn 3 Kill Yellow Pawn 4");
+      yellowPosition4 = 27;
+      yPosition4.removeChild(yellow4);
+      yellowUse4 = false;
+      yellowStart4.appendChild(yellow4);
+    }
+  }
+}
+function rKill4() {
+  if (restPoint.indexOf(redPosition4) === -1) {
+    if (redPosition4 === yellowPosition1) {
+      alert("Red Pawn 4 Kill Yellow Pawn 1");
+      yellowPosition1 = 27;
+      yPosition1.removeChild(yellow1);
+      yellowUse1 = false;
+      yellowStart1.appendChild(yellow1);
+    } else if (redPosition4 === yellowPosition2) {
+      alert("Red Pawn 4 Kill Yellow Pawn 2");
+      yellowPosition2 = 27;
+      yPosition2.removeChild(yellow2);
+      yellowUse2 = false;
+      yellowStart2.appendChild(yellow2);
+    } else if (redPosition4 === yellowPosition3) {
+      alert("Red Pawn 4 Kill Yellow Pawn 3");
+      yellowPosition3 = 27;
+      yPosition3.removeChild(yellow3);
+      yellowUse3 = false;
+      yellowStart3.appendChild(yellow3);
+    } else if (redPosition4 === yellowPosition4) {
+      alert("Red Pawn 4 Kill Yellow Pawn 4");
+      yellowPosition4 = 27;
+      yPosition4.removeChild(yellow4);
+      yellowUse4 = false;
+      yellowStart4.appendChild(yellow4);
+    }
+  }
+}
 
 // this code is to choose the red pawn
 var redUse1 = false;
@@ -285,6 +402,7 @@ red1.addEventListener("click", function () {
       rollOn.removeChild(rollOn.lastChild);
       run();
       rolled = true;
+      rKill1();
     } else if (redGoal1 + random > 6) {
       alert("can't roll");
       // temporarily
@@ -299,6 +417,7 @@ red2.addEventListener("click", function () {
       rollOn.removeChild(rollOn.lastChild);
       run2();
       rolled = true;
+      rKill2();
     } else if (redGoal2 + random > 6) {
       alert("can't roll");
       // temporarily
@@ -313,6 +432,7 @@ red3.addEventListener("click", function () {
       rollOn.removeChild(rollOn.lastChild);
       run3();
       rolled = true;
+      rKill3();
     } else if (redGoal3 + random > 6) {
       alert("can't roll");
       // temporarily
@@ -327,6 +447,7 @@ red4.addEventListener("click", function () {
       rollOn.removeChild(rollOn.lastChild);
       run4();
       rolled = true;
+      rKill4();
     } else if (redGoal4 + random > 6) {
       alert("can't roll");
       // temporarily
