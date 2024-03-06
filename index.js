@@ -500,6 +500,7 @@ red4.addEventListener("click", function () {
 var redPosition1 = 1;
 var redGoal1 = 0;
 var position1 = 0;
+var rSecondPhase1 = false;
 function run() {
   redPosition1 = redPosition1 + random;
   redGoal1 = redPosition1 - 51;
@@ -509,6 +510,7 @@ function run() {
   } else if (redPosition1 <= 57 && redGoal1 < 6) {
     position1 = document.getElementById("r" + redGoal1);
     position1.appendChild(red1);
+    rSecondPhase1 = true;
   } else if (redGoal1 === 6) {
     position1 = document.getElementById("r6");
     position1.appendChild(red1);
@@ -523,6 +525,7 @@ function run() {
 var redPosition2 = 1;
 var redGoal2 = 0;
 var position2 = 0;
+var rSecondPhase2 = false;
 function run2() {
   redPosition2 = redPosition2 + random;
   redGoal2 = redPosition2 - 51;
@@ -532,6 +535,7 @@ function run2() {
   } else if (redPosition2 <= 57 && redGoal2 < 6) {
     position2 = document.getElementById("r" + redGoal2);
     position2.appendChild(red2);
+    rSecondPhase2 = true;
   } else if (redGoal2 === 6) {
     position2 = document.getElementById("r6");
     position2.appendChild(red2);
@@ -545,6 +549,7 @@ function run2() {
 var redPosition3 = 1;
 var redGoal3 = 0;
 var position3 = 0;
+var rSecondPhase3 = false;
 function run3() {
   redPosition3 = redPosition3 + random;
   redGoal3 = redPosition3 - 51;
@@ -554,6 +559,7 @@ function run3() {
   } else if (redPosition3 <= 57 && redGoal3 < 6) {
     position3 = document.getElementById("r" + redGoal3);
     position3.appendChild(red3);
+    rSecondPhase3 = true;
   } else if (redGoal3 === 6) {
     position3 = document.getElementById("r6");
     position3.appendChild(red3);
@@ -567,6 +573,7 @@ function run3() {
 var redPosition4 = 1;
 var redGoal4 = 0;
 var position4 = 0;
+var rSecondPhase4 = false;
 function run4() {
   redPosition4 = redPosition4 + random;
   redGoal4 = redPosition4 - 51;
@@ -576,6 +583,7 @@ function run4() {
   } else if (redPosition4 <= 57 && redGoal4 < 6) {
     position4 = document.getElementById("r" + redGoal4);
     position4.appendChild(red4);
+    rSecondPhase4 = true;
   } else if (redGoal4 === 6) {
     position4 = document.getElementById("r6");
     position4.appendChild(red4);
@@ -587,28 +595,28 @@ function run4() {
 // functionn to kill with yellow1
 function yKill1() {
   if (restPoint.indexOf(yellowPosition1) === -1) {
-    if (yellowPosition1 === redPosition1) {
+    if (yellowPosition1 === redPosition1 && rSecondPhase1 === false) {
       alert("Yellow pawn 1 killed red pawn 1!");
       position1.removeChild(red1);
       redPosition1 = 1;
       redUse1 = false;
       redStart1.appendChild(red1);
       killed = true;
-    } else if (yellowPosition1 === redPosition2) {
+    } else if (yellowPosition1 === redPosition2 && rSecondPhase2 === false) {
       alert("Yellow pawn 1 killed red pawn 2!");
       position2.removeChild(red2);
       redPosition2 = 1;
       redUse2 = false;
       redStart2.appendChild(red2);
       killed = true;
-    } else if (yellowPosition1 === redPosition3) {
+    } else if (yellowPosition1 === redPosition3 && rSecondPhase3 === false) {
       alert("Yellow pawn 1 killed red pawn 3!");
       position3.removeChild(red3);
       redPosition3 = 1;
       redUse3 = false;
       redStart3.appendChild(red3);
       killed = true;
-    } else if (yellowPosition1 === redPosition4) {
+    } else if (yellowPosition1 === redPosition4 && rSecondPhase4 === false) {
       alert("Yellow pawn 1 killed red pawn 4!");
       position4.removeChild(red4);
       redPosition4 = 1;
@@ -624,28 +632,28 @@ function yKill1() {
 }
 function yKill2() {
   if (restPoint.indexOf(yellowPosition2) === -1) {
-    if (yellowPosition2 === redPosition1) {
+    if (yellowPosition2 === redPosition1 && rSecondPhase1 === false) {
       alert("Yellow pawn 2 killed red pawn 1!");
       position1.removeChild(red1);
       redPosition1 = 1;
       redUse1 = false;
       redStart1.appendChild(red1);
       killed = true;
-    } else if (yellowPosition2 === redPosition2) {
+    } else if (yellowPosition2 === redPosition2 && rSecondPhase2 === false) {
       alert("Yellow pawn 2 killed red pawn 2!");
       position2.removeChild(red2);
       redPosition2 = 1;
       redUse2 = false;
       redStart2.appendChild(red2);
       killed = true;
-    } else if (yellowPosition2 === redPosition3) {
+    } else if (yellowPosition2 === redPosition3 && rSecondPhase3 === false) {
       alert("Yellow pawn 2 killed red pawn 3!");
       position3.removeChild(red3);
       redPosition3 = 1;
       redUse3 = false;
       redStart3.appendChild(red3);
       killed = true;
-    } else if (yellowPosition2 === redPosition4) {
+    } else if (yellowPosition2 === redPosition4 && rSecondPhase4 === false) {
       alert("Yellow pawn 2 killed red pawn 4!");
       position4.removeChild(red4);
       redPosition4 = 1;
@@ -661,28 +669,28 @@ function yKill2() {
 }
 function yKill3() {
   if (restPoint.indexOf(yellowPosition3) === -1) {
-    if (yellowPosition3 === redPosition1) {
+    if (yellowPosition3 === redPosition1 && rSecondPhase1 === false) {
       alert("Yellow pawn 3 killed red pawn 1!");
       position1.removeChild(red1);
       redPosition1 = 1;
       redUse1 = false;
       redStart1.appendChild(red1);
       killed = true;
-    } else if (yellowPosition3 === redPosition2) {
+    } else if (yellowPosition3 === redPosition2 && rSecondPhase2 === false) {
       alert("Yellow pawn 3 killed red pawn 2!");
       position2.removeChild(red2);
       redPosition2 = 1;
       redUse2 = false;
       redStart2.appendChild(red2);
       killed = true;
-    } else if (yellowPosition3 === redPosition3) {
+    } else if (yellowPosition3 === redPosition3 && rSecondPhase3 === false) {
       alert("Yellow pawn 3 killed red pawn 3!");
       position3.removeChild(red3);
       redPosition3 = 1;
       redUse3 = false;
       redStart3.appendChild(red3);
       killed = true;
-    } else if (yellowPosition3 === redPosition4) {
+    } else if (yellowPosition3 === redPosition4 && rSecondPhase4 === false) {
       alert("Yellow pawn 3 killed red pawn 4!");
       position4.removeChild(red4);
       redPosition4 = 1;
@@ -698,28 +706,28 @@ function yKill3() {
 }
 function yKill4() {
   if (restPoint.indexOf(yellowPosition3) === -1) {
-    if (yellowPosition4 === redPosition1) {
+    if (yellowPosition4 === redPosition1 && rSecondPhase1 === false) {
       alert("Yellow pawn 4 killed red pawn 1!");
       position1.removeChild(red1);
       redPosition1 = 1;
       redUse1 = false;
       redStart1.appendChild(red1);
       killed = true;
-    } else if (yellowPosition4 === redPosition2) {
+    } else if (yellowPosition4 === redPosition2 && rSecondPhase2 === false) {
       alert("Yellow pawn 4 killed red pawn 2!");
       position2.removeChild(red2);
       redPosition2 = 1;
       redUse2 = false;
       redStart2.appendChild(red2);
       killed = true;
-    } else if (yellowPosition4 === redPosition3) {
+    } else if (yellowPosition4 === redPosition3 && rSecondPhase3 === false) {
       alert("Yellow pawn 4 killed red pawn 3!");
       position3.removeChild(red3);
       redPosition3 = 1;
       redUse3 = false;
       redStart3.appendChild(red3);
       killed = true;
-    } else if (yellowPosition4 === redPosition4) {
+    } else if (yellowPosition4 === redPosition4 && rSecondPhase4 === false) {
       alert("Yellow pawn 4 killed red pawn 4!");
       position4.removeChild(red4);
       redPosition4 = 1;
